@@ -1,0 +1,31 @@
+img{
+    height: 350px;
+    margin-left: 25%;
+    margin-top: 150px;
+}
+body{
+    display: flex;
+    margin: 0px;
+
+}
+.on{
+    height: 700px;
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 0;
+}
+.off{
+    width: 40%;
+    height: 700px;
+    margin-left: 0px;
+    background-color: rgb(184, 196, 207);
+}
+
+.newImage{
+    width: 25%;
+    height: 660px;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    
+}

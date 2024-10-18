@@ -10,20 +10,22 @@
 
     <style>
         body {
-            background-color: rgb(219, 229, 229);
+             background-color: rgb(219, 229, 229); */
+            
         }
 
         form {
-            margin-top: -350px;
+            margin-top: -390px;
             padding: 25px;
             border-radius: 10px;
             background-color: #fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(#b15e5e, #494e8e);
         }
 
         table {
             /* border: 2px solid;  */
-            width: 20%;
+            width: 100%;
             border-collapse: collapse;
             background-color: rgb(203, 192, 192);
         }
@@ -55,16 +57,25 @@
         crossorigin="anonymous"></script>
     <center>
         <h1 style="font-style: italic;">Get Register Here!!</h1>
+        <!-- <h3 style="font-style: italic;">E-Sports registration</h3> -->
         <form>
             <table>
 
 
-                <tr>
-                    <td>First Name </td>
+
+                <!-- <td>First Name </td>
                     <td><input type="text" value=""  placeholder="Enter" ></td>
                     <td>Last Name</td>
-                    <td><input type="text" value="" placeholder="Enter" ></td>
-                </tr>
+                    <td><input type="text" value="" placeholder="Enter" ></td> -->
+                <div class="input-group">
+                    <tr>
+                        <td>First and Last name</td>
+                        <td><input type="text" aria-label="First name"  placeholder="Enter" class="form-control" required></td>
+
+                        <td><input type="text" aria-label="Last name" placeholder="Enter" class="form-control" required></td>
+                    </tr>
+                </div>
+
                 <br></br>
                 <tr>
                     <td>DOB :</td>
@@ -73,30 +84,43 @@
                 <br></br>
                 <tr>
                     <td>Email :</td>
-                    <td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></td>
+                    <td><input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com"></td>
                 </tr>
                 <br></br>
                 <tr>
                     <td>Phone Number :</td>
-                    <td><input type="text" id="Phone Number" pattern="\d{10}" maxlength="10"
+                    <td><input type="text" id="Phone Number"  placeholder="0987654321" pattern="\d{10}" maxlength="10"
                             title="Please enter 10 digits" required></td>
                 </tr>
                 <br></br>
+                <div class="mb-3">
                 <tr>
-                    <td>Address :</td>
-                    <td><input type="textarea" /></td>
+                   <td> <label for="exampleFormControlTextarea1" class="form-label">Address</label></td>
+                   <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td> 
+                  </div>
                 </tr>
                 <br></br>
                 <tr>
-                    <td>location</td>
+                    <td>Location :</td>
                     <td>
-                        <select name="" id="">
-
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select</option>
+                            <option value="1">Andhra Pradesh</option>
+                            <option value="2">Arunachal Pradesh</option>
+                            <option value="3">Assam</option>
+                            <option value="4">Goa</option>
+                            <option value="5">Himachal Pradesh</option>
+                            <option value="6">Karnataka</option>
+                            <option value="7">Madhya Pradesh</option>
+                            <option value="8">Manipur</option>
+                            <option value="9">Tamil Nadu</option>
+                            <option value="10">Telangara</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td> Hightest Degree </td>
+                    <td> Hightest Degree : </td>
                     <td>
                         <!-- <select name="" id="">
                             <option value="">Enter degree</option>
@@ -104,18 +128,18 @@
                             <option value="">inter</option>
                             <option value="">B.Tech</option>
                         </select> -->
-                        <select class="form-select" size="3" aria-label="Size 3 select example">
+                        <select class="form-select" aria-label="Default select example">
                             <option selected>Select</option>
-                            <option value="1">10Th</option>
+                            <option value="1">10th</option>
                             <option value="2">Inter</option>
                             <option value="3">B.Tech</option>
                             <option value="4">Diploma</option>
-                          </select>
+                        </select>
                     </td>
                 </tr>
                 <br><br>
                 <tr>
-                    <td>Upload your Latest photo</td>
+                    <td>Upload your Latest photo :</td>
                     <td><input class="form-control" type="file" id="formFile"></td>
                 </tr>
 
@@ -142,8 +166,8 @@
         <div>
             <img src="./studentlife.webp" alt="">
             <br><br>
-            <video src="./mov_bbb.mp4" width="500px" height="500px" controls autoplay muted></video>
-            <br><br>
+            <!-- <video src="./mov_bbb.mp4" width="500px" height="500px" controls autoplay muted></video>
+            <br><br> -->
             <iframe src="https://www.youtube.com/embed/Mt0Y5X6885I" width="500px" height="500px"
                 allowfullscreen></iframe>
         </div>

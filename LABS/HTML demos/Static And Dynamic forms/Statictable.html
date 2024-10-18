@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+        .popup.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="form(event)">
+        <table>
+            <tr>
+                <td>FirstName:</td>
+                <td><input type="text" id="firstName"></td>
+                <td>LastName:</td>
+                <td><input type="text" id="lastName"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="text" id="email"></td>
+                <td>JobTitle:</td>
+                <td><input type="text" id="jobTitle"></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><input type="text" id="company"></td>
+                <td>Industry</td>
+                <td><select name="Industry" id="Industry">
+                        <option value="">select the industry</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Gaming">Gaming</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" id="Phone"></td>
+                <td>Country</td>
+                <td><select name="Country" id="Country">
+                        <option value="">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="Pak">Pakistan</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>AreaofInquire</td>
+                <td><input type="text" id="areaofinquire"></td>
+                <td>Comment</td>
+                <td><input type="text" id="Comment"></td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="popup" class="popup">
+        <h3>Submitted Data</h3>
+        <p id = "popupContent"></p>
+        <button onclick="closepop()">Close</button>
+    </div>
+
+    <script>
+        function form(event){
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const jobTitle = document.getElementById('jobTitle').value;
+            const company = document.getElementById('company').value;
+            const industry = document.getElementById('Industry').value;
+            const phone = document.getElementById('Phone').value;
+            const country = document.getElementById('Country').value;
+            const areaofinquire = document.getElementById('areaofinquire').value;
+            const comment = document.getElementById('Comment').value;
+
+            const data ={};
+
+            if(firstName){
+                data.FirstName = firstName;
+            }
+            if(lastName){
+                data.LastName = lastName;
+            }
+            if(email){
+                data.Email = email;
+            }
+            if(jobTitle){
+                data.JobTitle = jobTitle;
+            }
+            if(company){
+                data.Company = company;
+            }
+            if(industry){
+                data.Industry= industry;
+            }
+            if(phone){
+                data.Phone = phone;
+            }
+            if(Country){
+                data.Country = country;
+            }
+            if(areaofinquire){
+               data.Areaofinquire = areaofinquire;
+            }
+            if (comment){
+                data.Comment = comment;
+            }
+
+            const popupContent = document.getElementById('popupContent');
+            if(Object.keys(data).length>0){
+                popupContent.textContent=Object.keys(data).map(key => `${key}: ${data[key]}`).join(',');
+            } else{
+                popupContent.textContent = "No data was entered.";
+            }
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+
+        }
+        function closepop(){
+            const popup = document.getElementById('popup');
+            popup.classList.remove('show');
+        }
+    </script>
+</body>
+
+</html>
