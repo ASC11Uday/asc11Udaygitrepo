@@ -14,13 +14,13 @@
             background-image: url('./studenttt.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;  
-            /* background-color: rgba(219, 229, 229, 0.8); */
+            background-attachment: fixed;
         }
+
         h1 {
-    font-style: italic;
-    color: white; 
-}
+            font-style: italic;
+            color: white;
+        }
 
         form {
             margin-top: 20px;
@@ -60,9 +60,7 @@
             background: linear-gradient(#b15e5e, #494e8e);
         }
 
-        /* Styling for the submitted data table */
         .output table {
-            margin-trim: 100px;
             width: 100%;
             border-collapse: collapse;
             background-color: #d5d5d5;
@@ -114,7 +112,7 @@
         <div class="row">
             <!-- Form Column -->
             <div class="col-md-6">
-                <h1 style="font-style: italic;";color: white >Get Register Here!!</h1>
+                <h1>Get Register Here!!</h1>
                 <form id="registrationForm">
                     <table>
                         <tr>
@@ -176,22 +174,23 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <input value="Register Now" type="submit" class="btn btn-primary">
-                                <input value="Clear" type="reset" class="btn btn-danger">
-                            </td>
-                        </tr>
                     </table>
                 </form>
             </div>
 
-            <!-- Output Column -->
             <div class="col-md-6">
-                <div class="output" id="output" style="display:none;">
-                    <h3>Submitted Data:</h3>
+                <div class="output" id="output">
+                    <h3>Live Data Preview:</h3>
                     <table class="table" id="displayTable">
-                        <!-- Data will be dynamically added here -->
+                        <!-- Initially hide all rows -->
+                        <tr id="rowFirstName" style="display:none;"><td>First Name</td><td id="displayFirstName"></td></tr>
+                        <tr id="rowLastName" style="display:none;"><td>Last Name</td><td id="displayLastName"></td></tr>
+                        <tr id="rowDOB" style="display:none;"><td>DOB</td><td id="displayDOB"></td></tr>
+                        <tr id="rowEmail" style="display:none;"><td>Email</td><td id="displayEmail"></td></tr>
+                        <tr id="rowPhone" style="display:none;"><td>Phone Number</td><td id="displayPhone"></td></tr>
+                        <tr id="rowAddress" style="display:none;"><td>Address</td><td id="displayAddress"></td></tr>
+                        <tr id="rowLocation" style="display:none;"><td>Location</td><td id="displayLocation"></td></tr>
+                        <tr id="rowDegree" style="display:none;"><td>Highest Degree</td><td id="displayDegree"></td></tr>
                     </table>
                 </div>
             </div>
@@ -199,36 +198,53 @@
     </div>
 
     <script>
-        document.getElementById("registrationForm").onsubmit = function (event) {
-            event.preventDefault(); // Prevent the default form submission
+        // Function to update  dynamically
+        function updateField(inputId, displayId, rowId) {
+            const value = document.getElementById(inputId).value;
+            
+            if (inputId === "location" || inputId === "degree") {
+                // Check for "Select" option for dropdowns
+                if (value && value !== "Select") {
+                    document.getElementById(displayId).innerText = value;
+                    document.getElementById(rowId).style.display = ""; // Show the row if there's a value
+                } else {
+                    document.getElementById(rowId).style.display = "none"; // Hide the row if there's no value
+                }
+            } else {
+                // For text inputs and date inputs
+                if (value) {
+                    document.getElementById(displayId).innerText = value;
+                    document.getElementById(rowId).style.display = ""; 
+                } else {
+                    document.getElementById(rowId).style.display = "none"; 
+                }
+            }
+        }
 
-            // Get values from the form 
-            const firstName = document.getElementById("firstName").value.trim();
-            const lastName = document.getElementById("lastName").value.trim();
-            const dob = document.getElementById("dob").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const address = document.getElementById("address").value.trim();
-            const location = document.getElementById("location").value.trim();
-            const degree = document.getElementById("degree").value.trim();
+        // Function to update all fields dynamically
+        function updatePreview() {
+            updateField("firstName", "displayFirstName", "rowFirstName");
+            updateField("lastName", "displayLastName", "rowLastName");
+            updateField("dob", "displayDOB", "rowDOB");
+            updateField("email", "displayEmail", "rowEmail");
+            updateField("phone", "displayPhone", "rowPhone");
+            updateField("address", "displayAddress", "rowAddress");
+            updateField("location", "displayLocation", "rowLocation");
+            updateField("degree", "displayDegree", "rowDegree");
+        }
 
-            // Prepare the table structure
-            let tableContent = `
-                <tr><th>Field</th><th>Data</th></tr>
-                ${firstName ? `<tr><td>First Name</td><td>${firstName}</td></tr>` : ""}
-                ${lastName ? `<tr><td>Last Name</td><td>${lastName}</td></tr>` : ""}
-                ${dob ? `<tr><td>DOB</td><td>${dob}</td></tr>` : ""}
-                ${email ? `<tr><td>Email</td><td>${email}</td></tr>` : ""}
-                ${phone ? `<tr><td>Phone Number</td><td>${phone}</td></tr>` : ""}
-                ${address ? `<tr><td>Address</td><td>${address}</td></tr>` : ""}
-                ${(location && location !== "Select") ? `<tr><td>Location</td><td>${location}</td></tr>` : ""}
-                ${(degree && degree !== "Select") ? `<tr><td>Highest Degree</td><td>${degree}</td></tr>` : ""}
-            `;
+        
+        document.getElementById("firstName").addEventListener("input", updatePreview);
+        document.getElementById("lastName").addEventListener("input", updatePreview);
+        document.getElementById("dob").addEventListener("input", updatePreview);
+        document.getElementById("email").addEventListener("input", updatePreview);
+        document.getElementById("phone").addEventListener("input", updatePreview);
+        document.getElementById("address").addEventListener("input", updatePreview);
+        document.getElementById("location").addEventListener("change", updatePreview);
+        document.getElementById("degree").addEventListener("change", updatePreview);
 
-            // Insert the table content and show the output section
-            document.getElementById("displayTable").innerHTML = tableContent;
-            document.getElementById("output").style.display = "block";
-        };
+        
+        updatePreview();
     </script>
 </body>
 
