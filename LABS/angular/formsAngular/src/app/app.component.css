@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(219, 229, 229);
+    font-family: Arial, sans-serif;
+    background-image: url('../../public/studenttt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+form {
+    margin-top: -390px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(#b15e5e, #494e8e);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.7;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(203, 192, 192);
+
+}
+
+td {
+    font-size: x-large;
+    padding: 10px;
+    font-style: italic;
+}
+
+tr {
+    font-size: 20px;
+}
+
+input,
+select,
+textarea {
+    font-size: large;
+    width: 80%;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+input[type="file"],
+input[type="range"] {
+    width: auto;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-size: large;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}

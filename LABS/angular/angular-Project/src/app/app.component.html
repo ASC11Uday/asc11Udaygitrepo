@@ -1,0 +1,23 @@
+<h1>My Angular App..</h1><br>
+<h2>Property :{{title}}</h2>
+<h3>List of Employees</h3>
+<!-- <ol *ngfor = "let employee of employee">
+  <li>{{Employee.id}}</li>
+</ol> -->
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Salary</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let employee of employees"> 
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.salary}}</td>
+    </tr>
+  </tbody>
+</table>

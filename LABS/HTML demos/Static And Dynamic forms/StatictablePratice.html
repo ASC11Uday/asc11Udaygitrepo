@@ -155,3 +155,150 @@
 </body>
 
 </html>
+
+***************************************************************************
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <center>
+        <h1>Get Register Here!!</h1>
+        <form id="registrationForm">
+            <table>
+                <tr>
+                    <td>First and Last name</td>
+                    <td>
+                        <input type="text" id="firstName" placeholder="Enter First Name" autocomplete="given-name" required>
+                        <input type="text" id="lastName" placeholder="Enter Last Name" autocomplete="family-name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DOB :</td>
+                    <td><input type="date" id="dob" autocomplete="bday" /></td>
+                </tr>
+
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="email" id="email" placeholder="name@example.com" autocomplete="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number :</td>
+                    <td><input type="text" id="phone" placeholder="0987654321" pattern="\d{10}" maxlength="10"
+                            title="Please enter 10 digits" autocomplete="tel" required></td>
+                </tr>
+
+                <tr>
+                    <td>Address :</td>
+                    <td><textarea id="address" rows="3" autocomplete="street-address"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>Location :</td>
+                    <td>
+                        <select id="location" autocomplete="address-level1">
+                            <option selected>Select</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Highest Degree :</td>
+                    <td>
+                        <select id="degree" autocomplete="off">
+                            <option selected>Select</option>
+                            <option value="10th">10th</option>
+                            <option value="Inter">Inter</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="Diploma">Diploma</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Slider:</td>
+                    <td> <input type="range" id="slider" autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input value="Register Now" type="submit">
+                        <input value="Clear" type="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div>
+            <img src="./studentlife.webp" alt="Student life">
+            <iframe src="https://www.youtube.com/embed/Mt0Y5X6885I" width="500px" height="500px" allowfullscreen></iframe>
+        </div>
+    </center>
+
+    <script>
+        // Handle form submission
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Capture form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                dob: document.getElementById('dob').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                location: document.getElementById('location').value,
+                degree: document.getElementById('degree').value,
+                slider: document.getElementById('slider').value
+            };
+
+            // Debugging: Log captured data
+            console.log("Form Data Captured:", formData);
+
+            // Store data in localStorage
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // Debugging: Check if the data is successfully stored
+            console.log("Data Stored in localStorage:", localStorage.getItem('formData'));
+
+            alert('Data saved in localStorage!');
+        });
+
+        // Optional: Automatically load and fill form data if available in localStorage
+        window.onload = function () {
+            const savedData = JSON.parse(localStorage.getItem('formData'));
+            if (savedData) {
+                document.getElementById('firstName').value = savedData.firstName;
+                document.getElementById('lastName').value = savedData.lastName;
+                document.getElementById('dob').value = savedData.dob;
+                document.getElementById('email').value = savedData.email;
+                document.getElementById('phone').value = savedData.phone;
+                document.getElementById('address').value = savedData.address;
+                document.getElementById('location').value = savedData.location;
+                document.getElementById('degree').value = savedData.degree;
+                document.getElementById('slider').value = savedData.slider;
+            }
+        };
+    </script>
+</body>
+
+</html> -->

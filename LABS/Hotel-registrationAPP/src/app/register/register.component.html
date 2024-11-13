@@ -1,0 +1,65 @@
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="p-4 shadow rounded">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control" />
+    <div *ngIf="updateForm.get('name')?.invalid && updateForm.get('name')?.touched" class="text-danger">
+      Name is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" class="form-control" />
+    <div *ngIf="updateForm.get('email')?.invalid && updateForm.get('email')?.touched" class="text-danger">
+      Enter a valid email.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" id="phoneNumber" formControlName="phoneNumber" class="form-control" />
+    <div *ngIf="updateForm.get('phoneNumber')?.invalid && updateForm.get('phoneNumber')?.touched" class="text-danger">
+      Enter a valid 10-digit phone number.
+    </div>
+  </div>
+
+  <!-- Add Password Field -->
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" class="form-control" />
+    <div *ngIf="updateForm.get('password')?.invalid && updateForm.get('password')?.touched" class="text-danger">
+      Password is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="updateForm.invalid" class="btn btn-primary">Register</button>
+</form>
+
+   <!-- <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="p-4 shadow rounded">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control" />
+      <div *ngIf="updateForm.get('name')?.invalid && updateForm.get('name')?.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" class="form-control" />
+      <div *ngIf="updateForm.get('email')?.invalid && updateForm.get('email')?.touched" class="text-danger">
+        Enter a valid email.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" formControlName="phoneNumber" class="form-control" />
+      <div *ngIf="updateForm.get('phoneNumber')?.invalid && updateForm.get('phoneNumber')?.touched" class="text-danger">
+        Enter a valid 10-digit phone number.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="updateForm.invalid" class="btn btn-primary">Register</button>
+  </form>
+   -->

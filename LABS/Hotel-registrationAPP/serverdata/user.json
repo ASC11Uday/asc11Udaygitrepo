@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Udaykiran",
+      "phoneNumber": "1234567890",
+      "location": "Vijayawda",
+      "gender": "Male",
+      "salary": "500",
+      "age": "30"
+    },
+    {
+      "id": "2",
+      "name": "sandeep",
+      "phoneNumber": "0987654321",
+      "location": "Vizag",
+      "gender": "Male",
+      "salary": "400",
+      "age": "25"
+    },
+    {
+      "id": "3",
+      "name": "bhARGAV",
+      "phoneNumber": "987656781",
+      "location": "Tripathi",
+      "gender": "Female",
+      "salary": "3545",
+      "age": "23"
+    },
+    {
+      "id": "4",
+      "name": "Bobby",
+      "phoneNumber": "8765456789",
+      "location": "Arunachal Pradesh",
+      "gender": "male",
+      "salary": "9000000",
+      "age": "33"
+    }
+  ]
+}

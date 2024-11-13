@@ -1,0 +1,39 @@
+{
+  "phones": [
+    {
+      "id": "1",
+      "ownerName": "Uday",
+      "modelName": "iPhone 15 Pro Max",
+      "price": "170000",
+      "location": "Vijayawada"
+    },
+    {
+      "id": "2",
+      "ownerName": "Sandy",
+      "modelName": "Samsung S24 Ultra",
+      "price": "160000",
+      "location": "Vizag"
+    },
+    {
+      "id": "3",
+      "ownerName": "Bhargi",
+      "modelName": "Vivo",
+      "price": "80000",
+      "location": "Tirupati"
+    },
+    {
+      "id": "4",
+      "ownerName": "Bob",
+      "modelName": "Iqoo",
+      "price": "60000",
+      "location": "BZA"
+    },
+    {
+      "id": "6",
+      "ownerName": "Tony ",
+      "modelName": "iqoo 10",
+      "price": "65000",
+      "location": "BLR"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+
+</head>
+
+<body>
+<div>
+  <h1>Choose Your Phone!!</h1>
+  <!-- <img src="../../public/studenttt.jpg" alt="boiiiiiiii"> -->
+  
+  
+  <form>
+    <table>
+      <tr>
+        <td>First name:</td>
+        <td>
+          <input type="text" placeholder="Enter First Name" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Last name:</td>
+        <td>
+          <input type="text" placeholder="Enter Last Name" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>DOB :</td>
+        <td><input type="date" /></td>
+      </tr>
+
+      <tr>
+        <td>Email :</td>
+        <td><input type="email" placeholder="name@example.com"></td>
+      </tr>
+
+      <tr>
+        <td>Phone Number :</td>
+        <td><input type="text" placeholder="0987654321" pattern="\d{10}" maxlength="10" title="Please enter 10 digits"
+            required></td>
+      </tr>
+
+      <tr>
+        <td>Address :</td>
+        <td><textarea rows="3"></textarea></td>
+      </tr>
+
+      <tr>
+        <td>Brands :</td>
+        <td>
+          <select>
+            <option selected>Select</option>
+            <option value="1">iphone</option>
+            <option value="2">Samsung</option>
+            <option value="3">IQOO</option>
+            <option value="4">Vivo</option>
+            <option value="5">Realme</option>
+            <option value="6">Redmi</option>
+            <option value="7">RedMagic</option>
+            <option value="8">Motorolla</option>
+            <option value="9">Nokia</option>
+            <option value="10">Lava</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Highest Degree :</td>
+        <td>
+          <select>
+            <option selected>Select</option>
+            <option value="1">10th</option>
+            <option value="2">Inter</option>
+            <option value="3">B.Tech</option>
+            <option value="4">Diploma</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Upload your Latest photo :</td>
+        <td><input type="file"></td>
+      </tr>
+
+      <tr>
+        <td>Slider:</td>
+        <td> <input type="range"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <input value="Register Now" type="submit">
+          <input value="Clear" type="reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</div>
+</body>
+
+</html>

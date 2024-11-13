@@ -1,0 +1,20 @@
+/* h1{
+    color: aliceblue;
+    text-align: center;
+} */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+}

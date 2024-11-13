@@ -1,0 +1,41 @@
+<div class="details-container">
+  <h2>Registration Details</h2>
+  <table class="details-table">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>{{ userData?.name }}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>{{ userData?.email }}</td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td>{{ userData?.dateOfBirth }}</td>
+      </tr>
+      <tr>
+        <td>Blood Group</td>
+        <td>{{ userData?.bloodGroup }}</td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>{{ userData?.phone }}</td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>{{ userData?.location }}</td>
+      </tr>
+      <tr>
+        <td>Languages</td>
+        <td>{{ userData?.languages?.join(', ') }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

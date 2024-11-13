@@ -1,0 +1,46 @@
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+} */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none; /* Remove card border for a cleaner look */
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Center align text vertically */
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fa; /* Light background for card header */
+}
+
+.card-body {
+    padding: 20px; /* Add padding for card body */
+}

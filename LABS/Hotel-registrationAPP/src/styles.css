@@ -1,0 +1,123 @@
+/* 
+h4 {
+    font-size: 1.5rem;
+    color: #212529; 
+  }
+  
+  .login-form {
+    max-width: 360px;
+    width: 100%;
+    background-color: #f1f3f5; 
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6; }
+  
+  .form-label {
+    color: #495057; 
+    font-weight: 500;
+  }
+  
+  .form-control {
+    border-color: #ced4da; 
+    color: #212529;
+  }
+  
+  .form-control:focus {
+    border-color: #495057; 
+    box-shadow: none; 
+  }
+  
+  .btn-primary {
+    background-color: #343a40; 
+    border-color: #343a40;
+  }
+  
+  .btn-primary:hover {
+    background-color: #495057; 
+    border-color: #495057;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; 
+    border-color: #5a6268;
+  }
+   */
+
+   /* CSS for hover effects and font styling */
+* {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #212529;
+}
+
+.login-form {
+  max-width: 360px;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s; /* Smooth animation for form */
+}
+
+.login-form:hover {
+  transform: scale(1.02); /* Slight zoom-in effect on form hover */
+}
+
+.form-label {
+  color: #495057;
+  font-weight: 600;
+}
+
+.form-control {
+  border-color: #ced4da;
+  color: #212529;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-control:hover {
+  background-color: #f1f3f5; /* Light background on hover */
+}
+
+.form-control:focus {
+  border-color: #495057;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #343a40;
+  border-color: #343a40;
+  transition: background-color 0.2s, transform 0.2s; /* Add transition */
+}
+
+.btn-primary:hover {
+  background-color: #495057;
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+body{
+    background-image: url('./../public/pexels-thorsten-technoman-109353-338504.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}

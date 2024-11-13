@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">MyApp</div>
+    <div class="nav-links">
+      <a routerLink="/home" *ngIf="isLoggedIn()">Home</a>
+      <a routerLink="/details" *ngIf="isLoggedIn()">Details</a>
+      <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+      <a href="#" *ngIf="isLoggedIn()" (click)="logout($event)">Logout</a>
+    </div>
+  </div>
+</nav>

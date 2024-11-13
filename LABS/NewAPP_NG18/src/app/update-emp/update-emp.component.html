@@ -1,0 +1,16 @@
+<h3>Update Employee form</h3>
+<form (ngSubmit)="updateEmployee()">
+    <div class="form-group"><label for="id"></label>
+        <input type="text" class="form-control" name="id" [(ngModel)]="employee.id"/>
+    </div>
+    <div class="form-group"><label for="name"></label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="employee.name"/>
+    </div>
+    <div class="form-group"><label for="salary"></label>
+        <input type="text" class="form-control" name="salary" [(ngModel)]="employee.salary"/>
+    </div>
+    <br>
+    <button class="btn btn-success" class="btn btn-warning">Update</button>
+    &nbsp;&nbsp;
+    <button type="reset" class="btn btn-info">clear</button>
+</form>

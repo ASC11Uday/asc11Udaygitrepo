@@ -1,0 +1,10 @@
+
+body {
+    background-color: rgb(219, 229, 229);
+    font-family: Arial, sans-serif;
+    background-image: url('../public/lockpic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+

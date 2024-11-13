@@ -1,0 +1,80 @@
+<!-- <h1>Employee Phone details</h1>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Employee name</td>
+      <td>Brand Name</td>
+      <td>Price</td>
+      <td>Location</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let phones of employees"> 
+      <td>{{phones.id}}</td>
+      <td>{{phones.Name}}</td>
+      <td>{{phones.name}}</td>
+      <td>{{phones.price}}</td>
+      <td>{{phones.location}}</td>
+    </tr>
+  </tbody>
+</table> -->
+<div class="container mt-4">
+  <!-- Table for Read/Delete -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3>Employee List</h3>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.price }}</td>
+            <td>{{ employee.location }}</td>
+            <td>
+              <button class="btn btn-sm btn-warning me-2" (click)="onSelect(employee)">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="onDelete(employee.id!)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Form for Create/Update -->
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ isEditing ? 'Edit Employee' : 'Add New Employee' }}</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="selectedEmployee.name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" [(ngModel)]="selectedEmployee.price" name="price" required>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" [(ngModel)]="selectedEmployee.location" name="location" required>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ isEditing ? 'Update' : 'Add' }}</button>
+        <button type="button" class="btn btn-secondary ms-2" (click)="resetForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

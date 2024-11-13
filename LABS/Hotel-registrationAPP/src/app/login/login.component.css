@@ -1,0 +1,31 @@
+/* Minimalistic CSS with Bootstrap */
+
+.container {
+    padding-top: 3rem;
+}
+
+.login-form {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+    font-weight: 600; /* Bootstrap has font-weight-500 and 600 */
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 0.375rem; /* Matches Bootstrap’s default border radius */
+}
+
+button {
+    font-size: 1rem; /* 16px in rem */
+}
+
+h1 {
+    font-size: 50px;
+    font-style: inherit;
+    color: #343a40;
+}
