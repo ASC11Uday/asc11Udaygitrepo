@@ -45,7 +45,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -75,7 +75,11 @@ export class LoginComponent implements OnInit {
     if (this.userService.validateUser(loginid, password)) {
       console.log("Login successful");
       sessionStorage.setItem("loggedIn", "yes");
-      this.router.navigate(["/home"]);  // Redirect to the home page after login
+      this.router.navigate(["/home"]).then(() => {
+        console.log("Navigation successful to home page");
+      }).catch(error => {
+        console.error("Navigation error", error);
+      });  // Redirect to the home page after login
     } else {
       console.log("Login failed");
     }

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },  
   { path: 'list-users', component: ListUsersComponent },
   { path: 'add-user', component: AddUserComponent },
-  { path: 'update-user', component: UpdateUserComponent },
+  // { path: 'update-user', component: UpdateUserComponent },
   { path: 'update/:id', component: UpdateUserComponent },
 
 ];

@@ -35,9 +35,17 @@ export class AddUserComponent {
 
   onSubmit() {
     if (this.addUserForm.valid) {
-      const newUser = this.addUserForm.value;  // Exclude password
-      this.userService.createUser(newUser);    // Use createUser method as intended
-      this.router.navigate(['/list-users']);
+      const newUser = this.addUserForm.value;
+      this.userService.createUser(newUser).subscribe(
+        () => {
+          console.log('User added successfully');
+          this.router.navigate(['/list-users']);  // Navigate to list-users page
+        },
+        (error) => {
+          console.error('Error adding user', error);
+        }
+      );
     }
   }
+  
 }

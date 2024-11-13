@@ -15,11 +15,11 @@
 //   email: string;  
 // }
 export interface User {
-  id?: number;  // Optional field since it's auto-generated
+  id?: number;  
   name: string;
   email: string;
   phoneNumber: string;
-  password: string;  // Ensure this is present in your model
+  password: string;  
   location?: string;
   gender?: string;
   salary?: number;
