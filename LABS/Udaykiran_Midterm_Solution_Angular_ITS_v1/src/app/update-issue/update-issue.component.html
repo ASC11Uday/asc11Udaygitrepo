@@ -1,0 +1,36 @@
+<div *ngIf="issue; else loading">
+    <h2>Update Issue</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" [(ngModel)]="issue.title" name="title" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" id="status" [(ngModel)]="issue.status" name="status" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="priority">Priority</label>
+        <input type="text" id="priority" [(ngModel)]="issue.priority" name="priority" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="assignee">Assignee</label>
+        <input type="text" id="assignee" [(ngModel)]="issue.assignee" name="assignee" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="issue.description" name="description" class="form-control" required></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Update Issue</button>
+    </form>
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading issue details...</p>
+  </ng-template>
+  

@@ -1,0 +1,25 @@
+<div *ngIf="issue; else noIssue" class="issue-details-container">
+    <h2>Issue Details</h2>
+    <div class="issue-detail">
+      <strong>Title:</strong> {{ issue?.title }}
+    </div>
+    <div class="issue-detail">
+      <strong>Status:</strong> {{ issue?.status }}
+    </div>
+    <div class="issue-detail">
+      <strong>Priority:</strong> {{ issue?.priority }}
+    </div>
+    <div class="issue-detail">
+      <strong>Assignee:</strong> {{ issue?.assignee }}
+    </div>
+    <div class="issue-detail">
+      <strong>Description:</strong> {{ issue?.description }}
+    </div>
+  </div>
+  
+  <ng-template #noIssue>
+    <div class="no-issue-message">
+      <p>Issue not found!</p>
+    </div>
+  </ng-template>
+  

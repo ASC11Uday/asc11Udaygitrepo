@@ -1,0 +1,52 @@
+<!-- src/app/issues/issues.component.html -->
+<div class="issues-container">
+    <h2>Issues</h2>
+  
+    <!-- Search Bar for filtering issues -->
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      placeholder="Search issues..." 
+      (input)="onSearch()" 
+      class="search-bar"
+    >
+  
+    <!-- Table to display issues -->
+    <table *ngIf="issues.length > 0" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Issue Id</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Assignee</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Iterate over the issues and display them in rows -->
+        <tr *ngFor="let issue of issues">
+          <td>{{ issue.id }}</td>
+          <td>{{ issue.title }}</td>
+          <td>{{ issue.description }}</td>
+          <td>{{ issue.priority }}</td>
+          <td>{{ issue.status }}</td>
+          <td>{{ issue.assignee }}</td>
+          <td>{{ issue.date | date: 'shortDate' }}</td> <!-- Display formatted date -->
+          <td>
+            <button class="btn btn-info" (click)="viewDetails(issue)">View</button>
+            <button class="btn btn-warning" (click)="updateIssue(issue)">Update</button>
+            <button class="btn btn-danger" (click)="deleteIssue(issue.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Message if no issues are found -->
+    <div *ngIf="issues.length === 0">
+      <p>No issues found.</p>
+    </div>
+  </div>
+  

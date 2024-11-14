@@ -1,0 +1,47 @@
+<!-- src/app/add-issue/add-issue.component.html -->
+<div class="form-container">
+    <h2>Add New Issue</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" [(ngModel)]="newIssue.title" name="title" required class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="newIssue.description" name="description" required class="form-control"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="priority">Priority:</label>
+        <select id="priority" [(ngModel)]="newIssue.priority" name="priority" required class="form-control">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="newIssue.status" name="status" required class="form-control">
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="assignee">Assignee:</label>
+        <input type="text" id="assignee" [(ngModel)]="newIssue.assignee" name="assignee" required class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" [(ngModel)]="newIssue.date" name="date" required class="form-control">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Add Issue</button>
+    </form>
+  </div>
+  
