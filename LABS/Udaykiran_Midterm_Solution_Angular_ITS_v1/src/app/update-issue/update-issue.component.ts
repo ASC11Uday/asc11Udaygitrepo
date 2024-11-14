@@ -9,7 +9,7 @@ import { Issue } from '../model/isuue.model';
   styleUrls: ['./update-issue.component.css']
 })
 export class UpdateIssueComponent implements OnInit {
-  issue: Issue | undefined;  // Declare issue as possibly undefined
+  issue: Issue | undefined;  
 
   constructor(
     private route: ActivatedRoute,
@@ -18,16 +18,15 @@ export class UpdateIssueComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const issueId = +this.route.snapshot.paramMap.get('id')!;  // Get issue ID from route
+    const issueId = +this.route.snapshot.paramMap.get('id')!; 
     this.issueService.getIssueDetails(issueId).subscribe((issue) => {
-      this.issue = issue;  // Set the issue data when fetched
+      this.issue = issue;  
     });
   }
 
   onSubmit(): void {
     if (this.issue) {
       this.issueService.updateIssue(this.issue).subscribe(() => {
-        // Redirect to the issue list page after updating
         this.router.navigate(['/issues']);
       });
     }

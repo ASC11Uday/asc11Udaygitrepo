@@ -1,4 +1,4 @@
-<!-- src/app/issues/issues.component.html -->
+
 <div class="issues-container">
     <h2>Issues</h2>
   
@@ -26,7 +26,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Iterate over the issues and display them in rows -->
+    
         <tr *ngFor="let issue of issues">
           <td>{{ issue.id }}</td>
           <td>{{ issue.title }}</td>
@@ -34,7 +34,7 @@
           <td>{{ issue.priority }}</td>
           <td>{{ issue.status }}</td>
           <td>{{ issue.assignee }}</td>
-          <td>{{ issue.date | date: 'shortDate' }}</td> <!-- Display formatted date -->
+          <td>{{ issue.date | date: 'shortDate' }}</td> 
           <td>
             <button class="btn btn-info" (click)="viewDetails(issue)">View</button>
             <button class="btn btn-warning" (click)="updateIssue(issue)">Update</button>

@@ -11,7 +11,7 @@ export class HeaderComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   goToProjectManager(): void {
-    this.router.navigate(['/project-manager']);
+    this.router.navigate(['/issues']);
   }
 
   logout(): void {
@@ -20,6 +20,6 @@ export class HeaderComponent {
   }
 
   goToAddIssue(): void {
-    this.router.navigate(['/add-issue']);  // Navigate to the Add Issue page
+    this.router.navigate(['/add-issue']);  
   }
 }

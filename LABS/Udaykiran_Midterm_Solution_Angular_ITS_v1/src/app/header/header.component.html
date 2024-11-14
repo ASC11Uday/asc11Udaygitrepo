@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <button class="btn btn-primary" (click)="goToProjectManager()">Project Manager</button>
-      <button class="btn btn-danger" (click)="logout()">Logout</button>
-      <button class="btn btn-success ms-auto" (click)="goToAddIssue()">Add Issue</button> <!-- Add Issue Button -->
+      <div class="ms-auto">
+        <button class="btn btn-success" (click)="goToAddIssue()">Add Issue</button>
+        <button class="btn btn-danger ms-2" (click)="logout()">Logout</button>
+      </div>
     </div>
   </nav>
   

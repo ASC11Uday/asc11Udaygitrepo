@@ -9,7 +9,7 @@ import { Issue } from '../model/isuue.model';
   styleUrls: ['./issue-details.component.css']
 })
 export class IssueDetailsComponent implements OnInit {
-  issue: Issue | undefined;  // Issue details to display
+  issue: Issue | undefined; 
 
   constructor(
     private route: ActivatedRoute,
@@ -17,9 +17,9 @@ export class IssueDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const issueId = +this.route.snapshot.paramMap.get('id')!;  // Get ID from route
+    const issueId = +this.route.snapshot.paramMap.get('id')!;
     this.issueService.getIssueDetails(issueId).subscribe((data: Issue | undefined) => {
-      this.issue = data;  // Set the issue data to display
+      this.issue = data;  
     });
   }
 }

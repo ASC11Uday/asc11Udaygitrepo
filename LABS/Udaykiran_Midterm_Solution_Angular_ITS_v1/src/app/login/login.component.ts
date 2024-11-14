@@ -15,15 +15,14 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
-    // Attempt login using the provided username and password
     const success = this.authService.login(this.username, this.password);
 
     if (success) {
       console.log('Login successful');
-      this.router.navigate(['/issues']);  // Redirect to the issues page upon successful login
+      this.router.navigate(['/issues']);  
     } else {
       console.log('Invalid credentials');
-      this.loginError = true;  // Display the error message when login fails
+      this.loginError = true;  
     }
   }
 }
