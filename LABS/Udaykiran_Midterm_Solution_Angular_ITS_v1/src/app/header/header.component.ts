@@ -15,8 +15,9 @@ export class HeaderComponent {
   }
 
   logout(): void {
-    this.authService.logout();  
-    this.router.navigate(['/login']);
+    sessionStorage.removeItem('logged out');
+    alert("you're logged out");
+    this.router.navigate(['/']);
   }
 
   goToAddIssue(): void {
