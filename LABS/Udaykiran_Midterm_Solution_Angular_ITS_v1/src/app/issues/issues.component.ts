@@ -41,12 +41,18 @@ export class IssuesComponent implements OnInit {
   }
 
   onSearch(): void {
+
     if (this.searchQuery.trim() === '') {
       this.getIssues();
     } else {
-      this.issueService.searchIssues(this.searchQuery).subscribe((filteredIssues) => {
-        this.issues = filteredIssues;
-      });
+      
+      this.issues = this.issues.filter(issue => 
+        issue.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        issue.status.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        issue.priority.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        issue.assignee.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
     }
   }
+  
 }
