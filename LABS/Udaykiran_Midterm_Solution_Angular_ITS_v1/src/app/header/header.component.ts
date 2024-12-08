@@ -11,11 +11,16 @@ export class HeaderComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   goToProjectManager(): void {
-    this.router.navigate(['/issues']);
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/issues']);
+    } else {
+      alert('You need to log in to access the Project Manager.');
+      this.router.navigate(['/login']); 
+    }
   }
 
   logout(): void {
-    sessionStorage.removeItem('logged out');
+    sessionStorage.removeItem('loggedInUser');
     alert("you're logged out");
     this.router.navigate(['/']);
   }

@@ -35,7 +35,8 @@ export class IssuesComponent implements OnInit {
   deleteIssue(issueId: number): void {
     if (confirm('Are you sure you want to delete this issue?')) {
       this.issueService.deleteIssue(issueId).subscribe(() => {
-        this.getIssues();
+        // this.getIssues();
+        this.issues = this.issues.filter((issue) => issue.id !== issueId);
       });
     }
   }
