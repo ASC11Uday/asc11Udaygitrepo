@@ -1,0 +1,98 @@
+/* Edit Hotel Styles */
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h2.text-center {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+input.form-control {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #ff7f50; /* Coral color focus border */
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(255, 127, 80, 0.4);
+}
+
+/* Button Styling */
+button.btn-primary {
+  background-color: #ff7f50; /* Coral */
+  color: white;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #ff6347; /* Darker Coral on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  h2.text-center {
+    font-size: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  input.form-control {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  button.btn-primary {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

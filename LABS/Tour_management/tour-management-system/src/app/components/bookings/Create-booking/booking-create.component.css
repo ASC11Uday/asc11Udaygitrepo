@@ -1,0 +1,123 @@
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  
+  /* Title */
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Group (input fields and select) */
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input and select styling */
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus effect */
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #4caf50;
+    background-color: #f1f1f1;
+    outline: none;
+  }
+  
+  /* Submit and Cancel Buttons */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #28a745, #4caf50);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+  }
+  
+  button[type="button"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(92, 99, 105, 0.3);
+  }
+  
+  /* Form elements spacing */
+  input[type="text"], input[type="date"], select {
+    margin-top: 8px;
+  }
+  
+  /* Overall Form transition */
+  form {
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,78 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Welcome, Administrator</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-building fs-2 text-primary"></i> -->
+           <img src="./../../../assets/images/hotels.jpg" alt="Hotels" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Manage Hotels</h5>
+          <p class="card-text">Add, view, or update hotel details.</p>
+          <button class="btn btn-primary w-100" [routerLink]="['/hotels']">Manage Hotels</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-person fs-2 text-success"></i> -->
+          <img src="./../../../assets/images/guests.webp" alt="Guests" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Manage Guests</h5>
+          <p class="card-text">View, edit, or delete guest details.</p>
+          <button class="btn btn-success w-100" [routerLink]="['/guests']">Manage Guests</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-calendar-check fs-2 text-info"></i> -->
+          <img src="./../../../assets/images/booking.png" alt="Bookings" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Manage Bookings</h5>
+          <p class="card-text">View, modify, or cancel hotel bookings.</p>
+          <button class="btn btn-info w-100" [routerLink]="['/bookings']">Manage Bookings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-gear fs-2 text-warning"></i> -->
+          <img src="./../../../assets/images/facilities.webp" alt="Facilities" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Manage Facilities</h5>
+          <p class="card-text">Add or update available facilities for hotels.</p>
+          <button class="btn btn-warning w-100" [routerLink]="['/facilities']">Manage Facilities</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-stars fs-2 text-danger"></i> -->
+          <img src="./../../../assets/images/review-stars.jpg" alt="Reviews" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Manage Reviews</h5>
+          <p class="card-text">View and manage customer reviews for hotels.</p>
+          <button class="btn btn-danger w-100" [routerLink]="['/reviews']">Manage Reviews</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <!-- <i class="bi bi-plus-circle fs-2 text-primary"></i> -->
+          <img src="./../../../assets/images/trips.jpg" alt="Tour Plans" class="img-fluid rounded mb-3" style="max-height: 150px;">
+          <h5 class="card-title mt-3">Tour Plans</h5>
+          <p class="card-text">Add new records for hotels, guests, and more.</p>
+          <button class="btn btn-primary w-100" [routerLink]="['/Plans']">Plans</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

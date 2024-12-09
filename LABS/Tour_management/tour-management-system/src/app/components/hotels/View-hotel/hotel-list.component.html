@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <h2 class="text-center">Hotels List</h2>
+
+  <!-- Search input -->
+  <input 
+    type="text" 
+    class="form-control mb-4" 
+    placeholder="Search hotels..." 
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearch()"
+  />
+
+  <table class="table table-bordered mt-4">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Hotel Name</th>
+        <th>Location</th>
+        <th>Rating</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hotel of filteredHotels">
+        <td>{{ hotel.id }}</td>
+        <td>{{ hotel.Hotel_Name }}</td>
+        <td>{{ hotel.location }}</td>
+        <td>{{ hotel.rating }}</td>
+        <td>
+          <button class="btn btn-warning" (click)="editHotel(hotel.id)">
+            Edit
+          </button>
+          <button class="btn btn-danger" (click)="deleteHotel(hotel.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button routerLink="/create-hotel" class="btn btn-primary mt-3">
+    Add Hotel
+  </button>
+</div>

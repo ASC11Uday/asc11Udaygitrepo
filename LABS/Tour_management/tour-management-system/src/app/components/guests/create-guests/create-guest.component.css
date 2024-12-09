@@ -1,0 +1,89 @@
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  input.form-control {
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input Focus Effect */
+  input.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Error Message Styling */
+  small.text-danger {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #dc3545;
+    display: block;
+    margin-top: 0.25rem;
+  }
+  
+  /* Submit Button */
+  .btn-submit {
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Submit Button Hover Effect */
+  .btn-submit:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* Form Input Placeholder Styling */
+  input::placeholder {
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Add smooth transitions on hover and input focus */
+  input.form-control,
+  button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:focus,
+  input.form-control:focus {
+    outline: none;
+  }
+  

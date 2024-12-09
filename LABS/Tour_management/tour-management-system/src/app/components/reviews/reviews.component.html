@@ -1,0 +1,93 @@
+<div class="container">
+  <h2 class="text-center mb-4">Reviews</h2>
+  
+  <button class="btn btn-primary mb-3" (click)="showAddForm = true">
+    <i class="fas fa-plus-circle"></i> Add Review
+  </button>
+
+  <!-- Add Review Form -->
+  <div *ngIf="showAddForm" class="card p-4 mb-4 shadow-lg">
+    <h3 class="text-center mb-4">Add a New Review</h3>
+    <form (ngSubmit)="addReview()">
+      <div class="mb-3">
+        <label for="facility" class="form-label">Facility</label>
+        <input
+          type="text"
+          class="form-control"
+          id="facility"
+          [(ngModel)]="newReview.facility"
+          name="facility"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="hotel" class="form-label">Hotel</label>
+        <input
+          type="text"
+          class="form-control"
+          id="hotel"
+          [(ngModel)]="newReview.hotel"
+          name="hotel"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="rating" class="form-label">Rating</label>
+        <input
+          type="number"
+          class="form-control"
+          id="rating"
+          [(ngModel)]="newReview.rating"
+          name="rating"
+          min="1"
+          max="5"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="comments" class="form-label">Comments</label>
+        <textarea
+          class="form-control"
+          id="comments"
+          [(ngModel)]="newReview.comments"
+          name="comments"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">
+        <i class="fas fa-paper-plane"></i> Submit Review
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="showAddForm = false">
+        <i class="fas fa-times"></i> Cancel
+      </button>
+    </form>
+  </div>
+
+  <!-- Reviews Table -->
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered shadow-sm">
+      <thead>
+        <tr>
+          <th>Facility</th>
+          <th>Hotel</th>
+          <th>Rating</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let review of reviews">
+          <td>{{ review.facility }}</td>
+          <td>{{ review.hotel }}</td>
+          <td>
+            <span class="rating-stars">
+              <i *ngFor="let star of [].constructor(review.rating)" class="fas fa-star"></i>
+              <i *ngFor="let star of [].constructor(5 - review.rating)" class="far fa-star"></i>
+            </span>
+          </td>
+          <td>{{ review.comments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

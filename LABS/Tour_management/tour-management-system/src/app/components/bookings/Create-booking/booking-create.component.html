@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>Create New Booking</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="guest">Guest Name</label>
+      <input type="text" class="form-control" id="guest" [(ngModel)]="booking.guest" name="guest" required />
+    </div>
+
+    <div class="form-group">
+      <label for="hotel">Hotel Name</label>
+      <input type="text" class="form-control" id="hotel" [(ngModel)]="booking.hotel" name="hotel" required />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Booking Date</label>
+      <input type="date" class="form-control" id="date" [(ngModel)]="booking.date" name="date" required />
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select class="form-control" id="status" [(ngModel)]="booking.status" name="status" required>
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create Booking</button>
+    <button type="button" class="btn btn-secondary" routerLink="/bookings">Cancel</button>
+  </form>
+</div>

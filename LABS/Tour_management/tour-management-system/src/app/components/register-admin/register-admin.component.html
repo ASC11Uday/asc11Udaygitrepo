@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Register as Admin</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Name Field -->
+    <div class="form-group mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" formControlName="name" class="form-control" placeholder="Enter your full name" />
+      <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-danger">
+        <div *ngIf="registerForm.get('name')?.errors?.['required']">Name is required.</div>
+        <div *ngIf="registerForm.get('name')?.errors?.['pattern']">Name must contain only letters.</div>
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="form-group mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" placeholder="Enter your email address" />
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
+        <div *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="registerForm.get('email')?.errors?.['email']">Enter a valid email address.</div>
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" formControlName="password" class="form-control" placeholder="Enter your password" />
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger">
+        <div *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</div>
+        <div *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters long.</div>
+        <div *ngIf="registerForm.get('password')?.errors?.['pattern']">Password must include uppercase, lowercase, digit, and special character.</div>
+      </div>
+    </div>
+
+    <!-- Phone Field -->
+    <div class="form-group mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="text" formControlName="phone" class="form-control" placeholder="Enter your phone number" />
+      <div *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched" class="text-danger">
+        <div *ngIf="registerForm.get('phone')?.errors?.['required']">Phone number is required.</div>
+        <div *ngIf="registerForm.get('phone')?.errors?.['pattern']">Phone number must be 10 digits.</div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg w-100" [disabled]="registerForm.invalid">
+      <i class="fas fa-user-plus"></i> Register
+    </button>
+
+    <!-- Success and Error Messages -->
+    <div *ngIf="successMessage" class="text-success mt-3">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</div>
+  </form>
+</div>
