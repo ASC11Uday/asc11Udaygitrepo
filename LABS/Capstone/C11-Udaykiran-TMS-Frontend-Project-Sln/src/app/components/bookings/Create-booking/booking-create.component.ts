@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-booking-create',
   templateUrl: './booking-create.component.html',
   styleUrls: ['./booking-create.component.css']
-
 })
 export class BookingCreateComponent {
   booking: Omit<Booking, 'id'> = {
@@ -16,7 +15,13 @@ export class BookingCreateComponent {
     status: 'Pending',
   };
 
-  constructor(private bookingService: BookingService, private router: Router) {}
+  today: string;
+
+  constructor(private bookingService: BookingService, private router: Router) {
+    // Set today's date in the format YYYY-MM-DD
+    const currentDate = new Date();
+    this.today = currentDate.toISOString().split('T')[0];
+  }
 
   onSubmit(): void {
     this.bookingService.createBooking(this.booking).subscribe(() => {

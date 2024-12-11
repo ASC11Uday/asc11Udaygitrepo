@@ -29,7 +29,7 @@ export class BookingListComponent implements OnInit {
     this.searchTermSubject.pipe(
       debounceTime(300), // Debounce for 300ms to prevent excessive API calls
       distinctUntilChanged(), // Emit only when the search term changes
-      switchMap((searchTerm) => this.bookingService.searchBookings(searchTerm)) // Use search method from service
+      switchMap((searchTerm) => this.bookingService.searchBookings(searchTerm)) 
     ).subscribe((filteredBookings) => {
       this.filteredBookings = filteredBookings;
     });
@@ -38,7 +38,7 @@ export class BookingListComponent implements OnInit {
   getAllBookings(){
     this.bookingService.getBookings().subscribe((data) => {
       this.bookings = data;
-      this.filteredBookings = data; // Show all bookings initially
+      this.filteredBookings = data; 
     });
   }
 

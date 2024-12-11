@@ -59,8 +59,7 @@ export class BookingService {
     // Convert to a number and ensure it is an integer
     let counter = parseInt(bookingCounter, 10);
     
-    // Generate the sequential ID with padding
-    const sequentialId = counter.toString().padStart(4, '0'); // Ensure it has 4 digits (e.g., 0001)
+    const sequentialId = counter.toString().padStart(4, '0'); 
     
     // Create the booking ID
     const bookingId = `${prefix}${sequentialId}`;

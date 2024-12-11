@@ -7,19 +7,19 @@ import { FacilitiesService, Facility } from '../../services/facilities.service';
   styleUrls: ['./facilities.component.css'],
 })
 export class FacilitiesComponent implements OnInit {
-  facilities: Facility[] = []; // List of facilities
+  facilities: Facility[] = []; 
   newFacility: Facility = {
     name: '',
     description: '',
     availability: '',
     type: '',
   }; // New facility object
-  showAddForm: boolean = false; // Toggle for the add form
+  showAddForm: boolean = false; 
 
   constructor(private facilitiesService: FacilitiesService) {}
 
   ngOnInit(): void {
-    this.loadFacilities(); // Fetch facilities on load
+    this.loadFacilities(); 
   }
 
   // Load all facilities from the service
@@ -43,9 +43,9 @@ export class FacilitiesComponent implements OnInit {
       this.newFacility.type
     ) {
       this.facilitiesService.addFacility(this.newFacility).subscribe((facility: Facility) => {
-        this.facilities.push(facility); // Add to local list
-        this.newFacility = { name: '', description: '', availability: '', type: '' }; // Reset form
-        this.showAddForm = false; // Hide form
+        this.facilities.push(facility); 
+        this.newFacility = { name: '', description: '', availability: '', type: '' }; 
+        this.showAddForm = false; 
       });
     } else {
       alert('Please fill in all fields before submitting!');

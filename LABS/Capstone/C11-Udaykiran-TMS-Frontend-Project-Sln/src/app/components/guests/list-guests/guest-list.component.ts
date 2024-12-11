@@ -35,8 +35,7 @@ export class GuestListComponent implements OnInit {
 
   // Edit guest method
   editGuest(id: string): void {
-    // Log the guest id or navigate to edit page
     console.log(`Edit guest with ID: ${id}`);
-    this.router.navigate([`/edit-guest/${id}`]);  // Navigate to edit page
+    this.router.navigate([`/edit-guest/${id}`]);  
   }
 }

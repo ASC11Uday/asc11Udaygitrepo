@@ -9,7 +9,7 @@ export class HotelsComponent implements OnInit {
   hotels = [
     { name: 'Hotel A', location: 'Paris', rating: 4.5, price: 100 },
     { name: 'Hotel B', location: 'London', rating: 4.2, price: 120 },
-    // Add more mock data for testing
+   
   ];
 
   constructor() {}

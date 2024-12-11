@@ -35,7 +35,7 @@ export class UpdateGuestComponent implements OnInit {
   onSubmit(): void {
     if (this.guest.id) {
       this.guestService.updateGuest(this.guest.id, this.guest).subscribe(() => {
-        this.router.navigate(['/guests']); // Redirect to guest list page after update
+        this.router.navigate(['/guests']); 
       });
     }
   }

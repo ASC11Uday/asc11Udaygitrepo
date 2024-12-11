@@ -87,12 +87,10 @@ export class HotelService {
 
   // Search hotels based on name or location
   searchHotels(searchTerm: string): Observable<Hotel[]> {
-    // If no search term is provided, return all hotels
     if (!searchTerm.trim()) {
       return new Observable(observer => observer.next(this.allHotels));
     }
 
-    // Filter the hotels based on the search term (case-insensitive)
     const filteredHotels = this.allHotels.filter(
       hotel =>
         hotel.id.toLowerCase().includes(searchTerm.toLowerCase()) ||

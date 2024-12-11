@@ -1,5 +1,5 @@
 {
-  "admins"  : [
+  "admins": [
     {
       "id": "1",
       "name": "Super Admin",
@@ -34,6 +34,18 @@
       "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "bookingDetails": "Booked for Tokyo Tour"
+    },
+    {
+      "id": "G0003",
+      "name": "Bharghav",
+      "email": "bhargi@gmail.com",
+      "bookingDetails": "Booked for Paris Tour(Honey moon : ))"
+    },
+    {
+      "id": "G0004",
+      "name": "Sandeep",
+      "email": "san@gmail.com",
+      "bookingDetails": "Booked for Manali Tour"
     }
   ],
   "records": [
@@ -220,31 +232,59 @@
   "reviews": [
     {
       "facility": "Swimming Pool",
-      "hotel": "Grand Hotel",
+      "hotel": "Hotel Paradise",
       "rating": 5,
-      "comments": "Loved the clean and warm pool. Great service!",
-      "id": "288f"
+      "comments": "Excellent facility and maintenance.",
+      "id": "bf76"
     },
     {
-      "facility": "Wi-Fi",
-      "hotel": "Ocean View Resort",
+      "facility": "Gym",
+      "hotel": "Urban Stay",
       "rating": 4,
-      "comments": "Fast internet but limited to lobby area.",
-      "id": "1479"
+      "comments": "Good equipment but a bit crowded.",
+      "id": "f0b5"
     },
     {
-      "facility": "Nature Trails",
-      "hotel": "Mountain Escape",
-      "rating": 5,
-      "comments": "Amazing guided tours with breathtaking views.",
-      "id": "410c"
-    },
-    {
-      "facility": "Spa and Wellness",
-      "hotel": "Urban Retreat",
+      "facility": "Restaurant",
+      "hotel": "Hotel Bliss",
       "rating": 3,
-      "comments": "Good treatments but expensive.",
-      "id": "eebc"
+      "comments": "Average food and service.",
+      "id": "70ce"
+    },
+    {
+      "id": "7e07",
+      "facility": "wifi speed ",
+      "hotel": "Davanam Hotels",
+      "rating": 4,
+      "comments": "aifjpa"
+    },
+    {
+      "id": "2db4",
+      "facility": "wifi ",
+      "hotel": "Poojitha Hotel",
+      "rating": 5,
+      "comments": "hii"
+    },
+    {
+      "id": "6c63",
+      "facility": "wifi speed ",
+      "hotel": "Davanam Hotels",
+      "rating": 4,
+      "comments": "hfiahfp"
+    },
+    {
+      "id": "ku1h33u",
+      "facility": "rooms",
+      "hotel": "Poojitha Hotel",
+      "rating": 3,
+      "comments": "super"
+    },
+    {
+      "id": "gx9ww15",
+      "facility": "Gyms",
+      "hotel": "Taj Hotels",
+      "rating": 4.5,
+      "comments": "All equipment's are available"
     }
   ],
   "hotels": [

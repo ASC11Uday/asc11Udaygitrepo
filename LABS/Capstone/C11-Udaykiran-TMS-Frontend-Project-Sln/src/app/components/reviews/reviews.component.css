@@ -1,150 +1,116 @@
-/* Container styling */
-.container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+/* Add a background to the entire container */
+.review-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light Bootstrap gray */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-/* Heading */
-h2 {
-  font-family: 'Arial', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
+/* Header styling */
+.review-container h2 {
+  color: #343a40; /* Dark Bootstrap gray */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Button styling */
-.btn {
-  font-size: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn i {
-  margin-right: 0.5rem;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  transform: translateY(-3px);
-}
-
-/* Add Review Form Styling */
-.card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.form-label {
-  font-weight: 600;
-}
-
-input.form-control,
-textarea.form-control {
-  border-radius: 10px;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  transition: border 0.3s ease;
-}
-
-input.form-control:focus,
-textarea.form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
-
-textarea.form-control {
-  resize: vertical;
-}
-
-/* Submit and Cancel buttons */
-.btn-success {
-  background-color: #28a745;
-  color: white;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
+/* Button styles */
+button {
+  margin-bottom: 20px;
 }
 
 button {
-  margin-right: 10px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Rating stars */
-.rating-stars i {
-  color: #f39c12;
-  font-size: 1.2rem;
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Form styling */
+form {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+  resize: none;
+  height: 100px;
 }
 
 /* Table styling */
-.table {
+table {
   width: 100%;
-  margin-top: 1rem;
-  border-radius: 10px;
-  background-color: #f8f9fa;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-table.table th,
-table.table td {
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
+thead {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
 }
 
-table.table-striped tbody tr:nth-child(even) {
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-table.table th {
-  background-color: #007bff;
-  color: white;
-}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .review-container {
+    padding: 15px;
+  }
 
-table.table tbody td i {
-  margin-right: 0.5rem;
-}
+  table {
+    font-size: 14px;
+  }
 
-/* Responsive table */
-.table-responsive {
-  overflow-x: auto;
-}
-
-/* Icons inside table */
-.fas {
-  font-size: 1.2rem;
-  color: #007bff;
-  transition: transform 0.3s ease;
-}
-
-.fas:hover {
-  transform: scale(1.1);
+  button {
+    width: 100%;
+  }
 }

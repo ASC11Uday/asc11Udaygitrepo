@@ -8,9 +8,9 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class AuthService {
   private dbUrl = 'http://localhost:8080/api/v1/register';
-  private loggedInKey = 'isLoggedIn'; // Key for storing login state in localStorage
-  private attemptsLeft = 3; // Tracks login attempts
-  private lockTimeout: any = null; // In-memory lock state
+  private loggedInKey = 'isLoggedIn'; 
+  private attemptsLeft = 3; 
+  private lockTimeout: any = null; 
 
   constructor(private http: HttpClient) {}
 
@@ -73,7 +73,7 @@ export class AuthService {
     );
   }
   isAuthenticated(): boolean {
-    return localStorage.getItem(this.loggedInKey) === 'true'; // Check login state from localStorage
+    return localStorage.getItem(this.loggedInKey) === 'true'; 
   }
   
   // Logout
@@ -83,7 +83,7 @@ export class AuthService {
 
   // Check if the user is logged in
   isLoggedIn(): boolean {
-    return localStorage.getItem(this.loggedInKey) === 'true'; // Check from localStorage
+    return localStorage.getItem(this.loggedInKey) === 'true'; 
   }
 
   // Lock account for 30 minutes

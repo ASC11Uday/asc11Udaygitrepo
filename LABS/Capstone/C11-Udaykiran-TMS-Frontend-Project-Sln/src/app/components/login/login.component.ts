@@ -11,8 +11,8 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   loginForm: FormGroup;
   errorMessage: string = '';
-  attemptsLeft: number = 3;  // Track attempts left
-  isLocked: boolean = false; // Track if the account is locked
+  attemptsLeft: number = 3;  
+  isLocked: boolean = false; 
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
@@ -69,8 +69,8 @@ togglePasswordVisibility(): void {
     // Unlock the account after 30 minutes
     setTimeout(() => {
       this.isLocked = false;
-      this.attemptsLeft = 3; // Reset attempts
-      this.errorMessage = ''; // Clear any error messages
-    }, 30 * 60 * 1000); // 30 minutes in milliseconds
+      this.attemptsLeft = 3; 
+      this.errorMessage = ''; 
+    }, 30 * 60 * 1000); 
   }
 }
