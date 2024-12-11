@@ -1,0 +1,59 @@
+<div class="review-container container">
+  <!-- Toggle button -->
+  <button class="btn btn-primary w-100 mb-3" (click)="toggleForm()">
+    {{ showForm ? 'Cancel' : 'Add Review' }}
+  </button>
+
+  <!-- Form Section -->
+  <div *ngIf="showForm">
+    <h2>Add a New Review</h2>
+    <form [formGroup]="reviewForm" (ngSubmit)="submitForm()" class="mt-3">
+      <div class="form-group">
+        <label for="facility">Facility</label>
+        <input id="facility" formControlName="facility" type="text" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="hotel">Hotel</label>
+        <input id="hotel" formControlName="hotel" type="text" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Rating</label>
+        <input id="rating" formControlName="rating" type="number" min="1" max="5" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" formControlName="comments" class="form-control"></textarea>
+      </div>
+
+      <button type="submit" [disabled]="reviewForm.invalid" class="btn btn-success w-100">
+        Submit Review
+      </button>
+    </form>
+  </div>
+
+  <!-- Review List Section -->
+  <div *ngIf="!showForm">
+    <h2>Reviews</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Facility</th>
+          <th>Hotel</th>
+          <th>Rating</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let review of reviews">
+          <td>{{ review.facility }}</td>
+          <td>{{ review.hotel }}</td>
+          <td>{{ review.rating }}</td>
+          <td>{{ review.comments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

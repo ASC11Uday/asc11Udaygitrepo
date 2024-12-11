@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Add New Guest</h2>
+
+  <form (ngSubmit)="onSubmit()" #guestForm="ngForm">
+    <div class="form-group mb-4">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        [(ngModel)]="guest.name"
+        name="name"
+        placeholder="Enter guest's full name"
+        required
+        #name="ngModel"
+      />
+      <small *ngIf="name.invalid && name.touched" class="text-danger">
+        Name is required.
+      </small>
+    </div>
+
+    <div class="form-group mb-4">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        [(ngModel)]="guest.email"
+        name="email"
+        placeholder="Enter guest's email address"
+        required
+        email
+        #email="ngModel"
+      />
+      <small *ngIf="email.invalid && email.touched" class="text-danger">
+        Please provide a valid email address.
+      </small>
+    </div>
+
+    <div class="form-group mb-4">
+      <label for="bookingDetails">Booking Details</label>
+      <input
+        type="text"
+        id="bookingDetails"
+        class="form-control"
+        [(ngModel)]="guest.bookingDetails"
+        name="bookingDetails"
+        placeholder="Enter booking details"
+        required
+        minlength="10"
+        #bookingDetails="ngModel"
+      />
+      <small *ngIf="bookingDetails.invalid && bookingDetails.touched" class="text-danger">
+        Booking details must be at least 10 characters long.
+      </small>
+    </div>
+
+    <button type="submit" class="btn btn-submit w-100" [disabled]="guestForm.invalid">Add Guest</button>
+  </form>
+</div>

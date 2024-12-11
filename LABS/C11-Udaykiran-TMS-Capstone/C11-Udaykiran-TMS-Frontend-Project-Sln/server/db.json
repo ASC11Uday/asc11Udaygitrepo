@@ -1,0 +1,339 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "name": "Super Admin",
+      "email": "admin@example.com",
+      "password": "Admin@123",
+      "phone": "1234567890"
+    },
+    {
+      "id": "34b2",
+      "name": "uday",
+      "email": "uday@gmail.com",
+      "password": "Uday@123",
+      "phone": "9876543211"
+    },
+    {
+      "id": "79de",
+      "name": "Sandeep",
+      "email": "san@gmail.com",
+      "password": "Admin@123",
+      "phone": "1234567899"
+    }
+  ],
+  "guests": [
+    {
+      "id": "G0001",
+      "name": "John Doee",
+      "email": "john.doe@example.com",
+      "bookingDetails": "Booked for Paris Tour"
+    },
+    {
+      "id": "G0002",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "bookingDetails": "Booked for Tokyo Tour"
+    },
+    {
+      "id": "G0003",
+      "name": "Bharghav",
+      "email": "bhargi@gmail.com",
+      "bookingDetails": "Booked for Paris Tour(Honey moon : ))"
+    },
+    {
+      "id": "G0004",
+      "name": "Sandeep",
+      "email": "san@gmail.com",
+      "bookingDetails": "Booked for Manali Tour"
+    }
+  ],
+  "records": [
+    {
+      "id": "H0001",
+      "type": "hotel",
+      "details": "Luxury Hotel with sea view",
+      "name": "Udaykiran",
+      "location": "Vijayawada",
+      "price": 3000
+    },
+    {
+      "id": "G0001",
+      "type": "guest",
+      "details": "Bob, frequent traveler",
+      "name": "Bobby",
+      "location": "Delhi",
+      "price": 2500
+    },
+    {
+      "id": "F0001",
+      "type": "facility",
+      "details": "hotel staying",
+      "name": "Sandeep",
+      "location": "Vijayawada",
+      "price": 1500
+    },
+    {
+      "id": "H0002",
+      "type": "hotel",
+      "details": "Staying for 5 days",
+      "name": "Bharghav",
+      "location": "trupathi",
+      "price": 2000
+    },
+    {
+      "id": "R0001",
+      "type": "review",
+      "details": "4.5",
+      "name": "Uday",
+      "location": "Vij",
+      "price": 5000
+    },
+    {
+      "id": "H0003",
+      "type": "hotel",
+      "details": "hiiiiiiiiiii",
+      "name": "sakila",
+      "location": "blr",
+      "price": 0
+    },
+    {
+      "id": "F0002",
+      "type": "facility",
+      "details": "faphfoj",
+      "name": "Sandeep",
+      "location": "vazg",
+      "price": 4500
+    },
+    {
+      "id": "H0004",
+      "type": "hotel",
+      "details": "jpophhpo",
+      "name": "igog",
+      "location": "",
+      "price": 0
+    },
+    {
+      "id": "F0003",
+      "type": "facility",
+      "details": "uvyvu",
+      "name": "sai",
+      "location": "BZA",
+      "price": 9000
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Wi-Fi",
+      "description": "High-speed wireless internet available throughout the hotel.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "3bdc"
+    },
+    {
+      "name": "Swimming Pool",
+      "description": "Outdoor heated swimming pool with poolside service.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "24ab"
+    },
+    {
+      "name": "Fitness Center",
+      "description": "24/7 access to the gym with state-of-the-art equipment.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "9646"
+    },
+    {
+      "name": "Conference Room",
+      "description": "Spacious conference rooms for meetings and events.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "997e"
+    },
+    {
+      "name": "Spa and Wellness",
+      "description": "Relaxing spa treatments and wellness packages.",
+      "availability": "Not Available",
+      "type": "Hotel Facility",
+      "id": "7c0b"
+    },
+    {
+      "name": "Room Service",
+      "description": "24/7 in-room dining with a range of cuisines.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "26c8"
+    },
+    {
+      "name": "Airport Shuttle",
+      "description": "Complimentary shuttle service to and from the airport.",
+      "availability": "Available",
+      "type": "Hotel Facility",
+      "id": "66f7"
+    },
+    {
+      "name": "City Tour Guide",
+      "description": "Experienced guides for city tours covering major attractions.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "8fb0"
+    },
+    {
+      "name": "Adventure Sports",
+      "description": "Organized activities like trekking, rafting, and zip-lining.",
+      "availability": "Not Available",
+      "type": "Tour Facility",
+      "id": "5cba"
+    },
+    {
+      "name": "Cultural Experiences",
+      "description": "Traditional dance performances and craft workshops.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "d542"
+    },
+    {
+      "name": "Nature Trails",
+      "description": "Guided nature walks and wildlife safaris.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "9fc2"
+    },
+    {
+      "name": "Local Cuisine Tasting",
+      "description": "Food tours featuring authentic local dishes and street food.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "2096"
+    },
+    {
+      "name": "Historical Monuments Tour",
+      "description": "Day trips to nearby historical sites and monuments.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "ba55"
+    },
+    {
+      "name": "Cruise Rides",
+      "description": "Luxury boat rides and sunset cruises.",
+      "availability": "Not Available",
+      "type": "Tour Facility",
+      "id": "1021"
+    },
+    {
+      "name": "Photography Tours",
+      "description": "Photography workshops and scenic location tours.",
+      "availability": "Available",
+      "type": "Tour Facility",
+      "id": "baa0"
+    }
+  ],
+  "reviews": [
+    {
+      "facility": "Swimming Pool",
+      "hotel": "Hotel Paradise",
+      "rating": 5,
+      "comments": "Excellent facility and maintenance.",
+      "id": "bf76"
+    },
+    {
+      "facility": "Gym",
+      "hotel": "Urban Stay",
+      "rating": 4,
+      "comments": "Good equipment but a bit crowded.",
+      "id": "f0b5"
+    },
+    {
+      "facility": "Restaurant",
+      "hotel": "Hotel Bliss",
+      "rating": 3,
+      "comments": "Average food and service.",
+      "id": "70ce"
+    },
+    {
+      "id": "7e07",
+      "facility": "wifi speed ",
+      "hotel": "Davanam Hotels",
+      "rating": 4,
+      "comments": "aifjpa"
+    },
+    {
+      "id": "2db4",
+      "facility": "wifi ",
+      "hotel": "Poojitha Hotel",
+      "rating": 5,
+      "comments": "hii"
+    },
+    {
+      "id": "6c63",
+      "facility": "wifi speed ",
+      "hotel": "Davanam Hotels",
+      "rating": 4,
+      "comments": "hfiahfp"
+    },
+    {
+      "id": "ku1h33u",
+      "facility": "rooms",
+      "hotel": "Poojitha Hotel",
+      "rating": 3,
+      "comments": "super"
+    },
+    {
+      "id": "gx9ww15",
+      "facility": "Gyms",
+      "hotel": "Taj Hotels",
+      "rating": 4.5,
+      "comments": "All equipment's are available"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "C0002",
+      "name": "Sea Breeze Resort",
+      "location": "Miami",
+      "rating": 4
+    },
+    {
+      "id": "C0003",
+      "name": "Mountain View Lodge",
+      "location": "Denver",
+      "rating": 4
+    },
+    {
+      "id": "C0004",
+      "name": "Sandeep OYO",
+      "location": "Vizag",
+      "rating": 4.5
+    },
+    {
+      "id": "H0005",
+      "name": "Novotel ",
+      "location": "Vijayawada",
+      "rating": 5
+    }
+  ],
+  "bookings": [
+    {
+      "id": "B1001",
+      "guest": "John Doe",
+      "hotel": "Grand Hotel",
+      "date": "2023-12-10",
+      "status": "Cancelled"
+    },
+    {
+      "id": "B5499",
+      "guest": "Uday",
+      "hotel": "Grand Hotel",
+      "date": "2024-12-12",
+      "status": "Confirmed"
+    },
+    {
+      "id": "B5384",
+      "guest": "SunnyLeon",
+      "hotel": "Novotel",
+      "date": "2024-12-11",
+      "status": "Confirmed"
+    }
+  ]
+}

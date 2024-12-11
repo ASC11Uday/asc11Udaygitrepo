@@ -1,0 +1,112 @@
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Title Styling */
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+  
+  label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input Fields Styling */
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #4caf50;
+    background-color: #f1f1f1;
+    outline: none;
+  }
+  
+  /* Disabled Button Styling */
+  button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Submit Button Styling */
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #007bff, #4caf50);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Input Focus and Validity Styling */
+  input:valid {
+    border-color: #28a745;
+  }
+  
+  input:invalid {
+    border-color: #dc3545;
+  }
+  
+  /* Form Transition */
+  form {
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }
+  

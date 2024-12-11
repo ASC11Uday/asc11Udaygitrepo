@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2 class="text-center">Edit Hotel Details</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Hotel Name</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.Hotel_Name" name="name" required />
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.location" name="location" required />
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="number" class="form-control" [(ngModel)]="hotel.rating" name="rating" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
+</div>
